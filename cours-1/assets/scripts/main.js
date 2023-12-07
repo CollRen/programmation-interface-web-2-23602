@@ -7,5 +7,15 @@
  *      - notez que toutes les propriétés CSS nécessaires aux comportements demandés sont déjà définies
  */
 
+//Lancer une instance de état
 
+// Pour chaque etats on va lancer un etat (sans le "s").
 
+window.addEventListener("DOMContentLoaded", function () {
+    let elsEtats = document.querySelectorAll("[data-js-etats]");
+
+    for (i = 0, l = elsEtats.length; i < l; i++) {
+        // Différence entre argument (envoyer) et paramètre (Reçu lors de l'appel)
+        new Etats(elsEtats[i]);
+    }
+});
