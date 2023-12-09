@@ -12,10 +12,14 @@
 // Pour chaque etats on va lancer un etat (sans le "s").
 
 window.addEventListener("DOMContentLoaded", function () {
-    let elsEtats = document.querySelectorAll("[data-js-etats]");
+  let elsEtats = document.querySelectorAll("[data-js-etats]");
 
-    for (i = 0, l = elsEtats.length; i < l; i++) {
-        // Différence entre argument (envoyer) et paramètre (Reçu lors de l'appel)
-        new Etats(elsEtats[i]);
-    }
+  for (i = 0, l = elsEtats.length; i < l; i++) {
+    // Différence entre argument (envoyer) et paramètre (Reçu lors de l'appel)
+    /**
+     * @description
+     * @param elsEtats [data-js-etats] sélectionné au lancement de la page
+     */
+    new Etats(elsEtats[i]);
+  }
 });
