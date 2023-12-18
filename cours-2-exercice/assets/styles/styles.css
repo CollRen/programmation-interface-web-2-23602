@@ -1,0 +1,75 @@
+/* GENERIC */
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+/* ELEMENTS */
+
+body {
+    margin: 0;
+    padding: 8vw;
+}
+
+main {
+    margin-top: 50px;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.4;
+    margin: 0;
+}
+
+
+/* COMPONENTS */
+
+.youtube {
+    display: flex;
+}
+
+.youtube + .youtube {
+    margin-top: 25px;
+}
+
+.youtube__detail,
+.youtube__video-wrapper {
+    width: 50%;
+}
+
+.youtube__detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 25px;
+}
+
+.youtube h2,
+.youtube h3 {
+    font-weight: 300;
+}
+
+.youtube h2 + h3 {
+    margin-top: 25px;
+}
+
+.youtube__video-wrapper {
+    position: relative;
+}
+
+.youtube__video-wrapper::after {
+    content: '';
+    display: block;
+    padding-bottom: 56.25%;
+}
+
+.youtube__video {
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
