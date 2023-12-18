@@ -2,6 +2,8 @@
 
 class Compteur {
     constructor() {
+        // créer le this.'noeud DOM';
+        this.el = document.querySelector();
         this.valeur = 0;
     }
 }
