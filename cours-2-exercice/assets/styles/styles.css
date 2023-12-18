@@ -5,7 +5,6 @@
     font-family: sans-serif;
 }
 
-
 /* ELEMENTS */
 
 body {
@@ -23,7 +22,6 @@ h3 {
     line-height: 1.4;
     margin: 0;
 }
-
 
 /* COMPONENTS */
 
@@ -61,7 +59,7 @@ h3 {
 }
 
 .youtube__video-wrapper::after {
-    content: '';
+    content: "";
     display: block;
     padding-bottom: 56.25%;
 }
