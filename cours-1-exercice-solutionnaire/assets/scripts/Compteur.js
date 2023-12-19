@@ -16,7 +16,7 @@ class Compteur {
         this._elOperations.addEventListener(
             "click",
             function (PointerEvent) {
-                let action = PointerEvent.target.dataset.jsAction; // "moins" ou "plus"
+                let action = PointerEvent.target.dataset.jsAction; // "moins" ou "plus" provenant du jsAction("data-js-action")
                 if (action) {
                     // Dès qu'il y a une données c'est vrai
                     this.calculeNombre(action);
@@ -55,10 +55,13 @@ class Compteur {
             function (e) {
                 if (e.propertyName == "opacity") {
                     elNombre.remove();
+
                     let dom = `<span class="nombre nombre--transition-${
                         action == "plus" ? "bas" : "haut"
                     }" data-js-nombre>${this._nombre}</span>`;
+
                     this._el.insertAdjacentHTML("afterbegin", dom);
+
                     setTimeout(
                         function () {
                             let elNombre =
