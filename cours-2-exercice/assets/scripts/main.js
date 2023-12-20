@@ -5,15 +5,12 @@ lancer les comportements demandés
 */
 
     //el parent, ajoute ce parent à l'objet à envoyer
-    const elParent = document.querySelectorAll("[data-js-youtube-videos]");
-    // youTubeVideos.forEach(function (element) {
-    //     let test = new Video(element, youTubeVideos);
-
-    //     console.log(test);
-    // });
-
-    console.log(Video.prototype);
-
-    let video1 = new Video(youTubeVideos, elParent[0]);
-    console.log(youTubeVideos);
+    const elParent = document.querySelector("[data-js-youtube-videos]");
+    for (let i = 0, l = youTubeVideos.length; i < l; i++) {
+        new Video(youTubeVideos[i], elParent);
+    }
+    // Seulement pour rafraichir la page plus rapidement durant la phase test du code
+    this.window.addEventListener("click", function () {
+        location.reload();
+    });
 });
