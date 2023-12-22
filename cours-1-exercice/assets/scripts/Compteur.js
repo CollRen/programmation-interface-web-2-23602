@@ -11,8 +11,6 @@ class Compteur {
         this.init();
     }
     init() {
-        console.log(this._elOperations);
-
         this._elOperations.addEventListener(
             "click",
             function (pointerEv) {
@@ -31,6 +29,7 @@ class Compteur {
     }
 
     afficher(action) {
+        this._elNombre.classList.add(`${action}--transition`);
         this._elNombre.innerText = this._nombre;
     }
 }

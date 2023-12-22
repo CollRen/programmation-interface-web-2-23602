@@ -39,4 +39,15 @@ span {
     margin-left: 5px;
 }
 
-/* Styles des états de l'élément "nombre" à définir */
+.nombre {
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.nombre--transition--bas {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+.nombre--transition--haut {
+    opacity: 0;
+    transform: translateY(+20px);
+}
