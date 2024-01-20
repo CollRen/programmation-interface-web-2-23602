@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 8vw;
+}
+
+main {
+    margin-top: 50px;
+}
+
+h1,
+p {
+    margin: 0;
+}
+
+p {
+    font-size: 1.05em;
+    font-weight: 100;
+    letter-spacing: .025em;
+    line-height: 1.5em;
+}
+
+p + small {
+    margin-top: 10px;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* COMPONENTS */
+
+.grille {
+    display: grid;
+}
+
+.grille--3 {
+    gap: 8vw;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media screen and (min-width: 576px) {
+    .grille--3 {
+        gap: 5vw;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .grille--3 {
+        gap: 3vw;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/*
+ * ref : https://codepen.io/edeesims/pen/wvpYWW
+ */
+.ipsum {
+    cursor: pointer;
+    position: relative;
+    perspective: 1000px;
+}
+
+.ipsum__interieur {
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s cubic-bezier(.6, 1.5, .64, 1);
+    transform-style: preserve-3d;
+    width: 100%;
+}
+
+.ipsum__interieur::after {
+    content: '';
+    display: block;
+    padding-bottom: 125%;
+}
+
+.ipsum--flip .ipsum__interieur {
+    transform: rotateY(180deg);
+}
+  
+.ipsum__face, .ipsum__dos {
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.ipsum__dos {
+    justify-content: flex-end;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;    /* ref : https://getcssscan.com/css-box-shadow-examples */
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 30px;
+    transform: rotateY(180deg);
+}
+
+.ipsum__img {
+    min-height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform .3s ease;
+}
