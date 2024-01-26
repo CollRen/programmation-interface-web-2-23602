@@ -11,11 +11,12 @@ class LoremIpsum {
 
 
     /**
-     * Initialise les comportements
+     * Initialise les comportements 
+     * -> Appelée via this.init() de chaque Class enfant (SANS #)
      */
     init() {
         this.#_el.addEventListener('click', function() {
-            if (this.#_el.classList.contains('ipsum--flip')) this.afficheFace();
+            if (this.#_el.classList.contains('ipsum--flip')) this.#afficheFace();
             else this.afficheDos();
         }.bind(this));
     }
@@ -24,7 +25,7 @@ class LoremIpsum {
     /**
      * Affiche le côté face de la tuile
      */
-    afficheFace() {
+    #afficheFace() { // Utilisée dans le INIT donc SANS #
         this.#_elImg.src = this.image;
         this.#_el.classList.remove('ipsum--flip');
     }
@@ -33,7 +34,7 @@ class LoremIpsum {
     /**
      * Affiche le côté dos de la tuile
      */
-    afficheDos() {
+    afficheDos() { // AUSSI utilisée dans "BobRoss" ( donc SANS #)
         this.#_elCitation.innerHTML = this.citation;
         this.#_el.classList.add('ipsum--flip');
     }
@@ -42,9 +43,9 @@ class LoremIpsum {
     /**
      * Retoune un entier au hasard sous la valeur reçue en paramètre
      * @param {Int} max 
-     * @returns 
+     * @returns
      */
-    #randomNumber(max) {
+    #randomNumber(max) { // Fonctions seulement utilisée ICI (#)
         return Math.floor(Math.random() * max);
     }
 
@@ -60,13 +61,14 @@ class LoremIpsum {
     /**
      * Retourne l'élément dans lequel injecter la citation
      */
-    get elCitation() {
+    get elCitation() { // Ce get rend cette propriété disponible de global, ou en héritage?
         return this.#_elCitation;
     }
 
 
     /**
      * Retourne l'image aléatoire à injecter dans la tuile
+     * Cette fonction pourra être utilisée de fâçon globale
      */
     get image() {
         let src = this.#_elImg.src,

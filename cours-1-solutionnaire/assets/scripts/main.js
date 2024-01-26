@@ -7,13 +7,10 @@
  *      - notez que toutes les propriétés CSS nécessaires aux comportements demandés sont déjà définies
  */
 
-
-window.addEventListener('DOMContentLoaded', function() {
-
-    let elsEtats = document.querySelectorAll('[data-js-etats]');
+window.addEventListener("DOMContentLoaded", function () {
+    let elsEtats = document.querySelectorAll("[data-js-etats]");
 
     for (let i = 0, l = elsEtats.length; i < l; i++) {
-        new Etats(elsEtats[i]);        
+        new Etats(elsEtats[i]);
     }
-
 });

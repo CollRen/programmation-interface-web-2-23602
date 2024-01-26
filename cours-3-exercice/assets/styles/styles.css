@@ -23,3 +23,22 @@ form + p {
 h1 {
     margin: 0;
 }
+
+[data-js-calcul] {
+    font-size: 1rem;
+    border: solid 2px lightblue;
+    border-radius: 48px;
+    background-color: lightblue;
+    padding: 0.25rem;
+    margin: 3rem;
+    margin-top: 30rem;
+}
+
+[data-js-calcul]:hover {
+    opacity: 70%;
+}
+
+[data-js-resultat] {
+    font-size: 2rem;
+    color: darkblue;
+}

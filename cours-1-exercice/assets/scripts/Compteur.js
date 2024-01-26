@@ -1,5 +1,3 @@
-//class Compteur
-
 class Compteur {
     constructor(el) {
         // créer le this.'noeud DOM';
@@ -29,8 +27,39 @@ class Compteur {
     }
 
     afficher(action) {
-        this._elNombre.classList.add(`${action}--transition`);
-        this._elNombre.innerText = this._nombre;
+        let elNombre = this._el.querySelector("[data-js-nombre]");
+        elNombre.classList.add(
+            `nombre--${action == "plus" ? "haut" : "bas"}--transition`
+        );
+        this._elOperations.style.pointerEvents = "none";
+        elNombre.addEventListener(
+            "transitionend",
+            function (e) {
+                /* console.log(this._elNombre.bind(this)); la valeur 'Compteur' du this est perdue ici */
+                if (e.propertyName == "opacity") {
+                    elNombre.remove();
+
+                    let dom = `<span class="nombre nombre--${
+                        action == "plus" ? "bas" : "haut"
+                    }--transition" data-js-nombre>${this._nombre}</span>`;
+                    this._el.insertAdjacentHTML("afterbegin", dom);
+                }
+
+                setTimeout(
+                    function () {
+                        let elNombre =
+                            this._el.querySelector("[data-js-nombre]");
+                        elNombre.classList.remove(
+                            `nombre--${
+                                action == "plus" ? "bas" : "haut"
+                            }--transition`
+                        );
+                    }.bind(this),
+                    10
+                );
+                this._elOperations.style.pointerEvents = "all";
+            }.bind(this) // pour this._nombre et this._el (sinon => undefined)
+        );
     }
 }
 

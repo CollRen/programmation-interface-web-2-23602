@@ -1,5 +1,4 @@
 (function() {
-
     console.log(Livre.decrire('Tom', 'Tucker', 300, 1));
 
     
@@ -9,5 +8,7 @@
      * autrement dit, contrairement aux méthodes de - par exemple - l'objet String, il n'est pas nécessaire de faire l'instance de Math pour appeler sa méthode random().
      */
     Math.random() * 10;
+
+    console.log(Math.floor(Math.random() * 10)); // 2 || 5 || 9 [...]
 
 })();

@@ -12,7 +12,7 @@ class Compteur {
      * Initialise les comportements
      */
     init() {
-        console.log(this._elOperations);
+        /* console.log(this._elOperations); */
         this._elOperations.addEventListener(
             "click",
             function (PointerEvent) {
@@ -54,6 +54,7 @@ class Compteur {
             "transitionend",
             function (e) {
                 if (e.propertyName == "opacity") {
+                    console.log(elNombre);
                     elNombre.remove();
 
                     let dom = `<span class="nombre nombre--transition-${

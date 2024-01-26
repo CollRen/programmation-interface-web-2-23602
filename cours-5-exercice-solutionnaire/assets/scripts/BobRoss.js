@@ -33,6 +33,8 @@ class BobRoss extends LoremIpsum {
      * @param {Array} aCitations 
      */
     afficheDos() {
+        // This.elCitation est disponible ici grâce à Héritage
+        // this.citation est aussi disponible grâce au get (héritage)
         this.elCitation.innerHTML = `<p>${this.citation}</p>
                                     <small>- Bob Ross</small>`; 
                                 
