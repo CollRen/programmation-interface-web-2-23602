@@ -1,0 +1,162 @@
+/* GENERIC */
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+/* ELEMENTS */
+
+body {
+    height: 200vh;
+    margin: 0;
+    padding: 8vw;
+}
+
+header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    margin-top: 50px;
+}
+
+h1 {
+    margin: 0;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+
+/* OBJECTS */
+
+/* Gestion scroll */
+.overflow-y-hidden {
+    overflow-y: hidden;
+}
+
+
+/* COMPOSANTS */
+
+/* BURGER */
+
+.burger {
+    cursor: pointer;
+    padding: 10px 0 10px 10px;
+}
+
+.burger__bar {
+    background-color: black;
+    display: block;
+    height: 2px;
+    transition: transform .3s ease;
+    width: 35px;
+}
+
+.burger__bar + .burger__bar {
+    margin-top: 5px;
+}
+
+.burger:hover .burger__bar:first-of-type{
+    transform: translateY(-5px);
+}
+
+.burger:hover .burger__bar:last-of-type{
+    transform: translateY(5px);
+}
+
+
+/* MENU */
+
+.menu {
+    /* À compléter */
+    background-color: rgba(0,0,0,.9);
+    height: 100%;
+    left: 0;
+    margin: 0;
+    overflow-y: scroll;
+    padding: 16vw 8vw 8vw;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Classes décorateurs : --ferme et --ouvert */
+.menu--ferme {
+    /* À définir */
+}
+
+.menu--ouvert {
+    /* À définir */
+}
+
+.menu__liste {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__item + .menu__item {
+    margin-top: clamp(35px, 5vw, 75px);
+}
+
+.menu__lien {
+    color: white;
+    font-size: clamp(35px, 5vw, 75px);
+    position: relative;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.menu__lien::after {
+    content: '';
+    background-color: white;
+    bottom: -8px;
+    height: clamp(3px, .45vw, 7px);
+    right: -20%;
+    position: absolute;
+    transition: width .3s ease;
+    width: 0;
+}
+
+.menu__lien:hover:after {
+    left: 0;
+    width: 120%;
+}
+
+.menu__ferme {
+    cursor: pointer;
+    right: 7vw;
+    padding: clamp(22px, 2.25vw, 35px);
+    position: absolute;
+    top: calc(7vw + 3px);
+}
+
+.menu__ferme::before {
+    content: "";
+    background: linear-gradient(transparent, transparent 14px, white 14px, white, 16px, transparent 16px), 
+                linear-gradient(to right, transparent, transparent 14px, white 14px, white, 16px, transparent 16px);
+    height: 30px;
+    right: 1vw;
+    position: absolute;
+    top: 1vw;
+    transform: rotate(45deg);
+    transition: transform .3s ease;
+    width: 30px;
+}
+
+.menu__ferme:hover::before {
+    transform: rotate(0);
+}
