@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 8vw;
+}
+
+main,
+table,
+h3 + form,
+h3 + div,
+form + div,
+select + div,
+button + div {
+    margin-top: 50px;
+}
+
+form + form,
+div + div {
+    margin-top: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+span + button,
+input + button,
+label + button {
+    margin-left: 10px;
+}
+
+ul,
+ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+li + li {
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+    border: solid 2px black;
+}
+
+td,
+th {
+    border: solid 1px black;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.envoye {
+    opacity: .5;
+    pointer-events: none;
+}
