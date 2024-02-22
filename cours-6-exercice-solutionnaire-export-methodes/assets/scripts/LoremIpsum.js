@@ -4,7 +4,6 @@ class LoremIpsum {
         this.afficheFace = this.afficheFace.bind(this);
     }
 
-
     /**
      * Initialise les comportements
      */

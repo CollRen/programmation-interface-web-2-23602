@@ -1,0 +1,34 @@
+.hero {
+    width: 100%;
+    height: 100%;
+    border: 3px solid tomato;
+    position: relative;
+
+    & img {
+        max-width: 100%;
+        max-height: 100%;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    & > h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 8rem;
+        color: var(--coul-secondaire-fonce);
+        z-index: 4;
+    }
+    & .glass {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.1);
+        width: 50%;
+        height: 50%;
+        z-index: 3;
+        backdrop-filter: blur(50px);
+    }

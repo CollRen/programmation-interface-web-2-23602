@@ -1,4 +1,4 @@
-import { classesMapping } from './classesMapping.js';
+import { classesMapping } from './classeMapping.js';
 
 
 
@@ -15,5 +15,5 @@ import { classesMapping } from './classesMapping.js';
 			if (component == cle) new classesMapping[component](elComponent);
 		}
 	}
-	…
+
 })();

@@ -86,3 +86,5 @@ class LoremIpsum {
         return `<p>${this._citations[randomIndex]}</p>`;
     }
 }
+
+export const {init, afficheFace} = new LoremIpsum;
