@@ -5,6 +5,8 @@
 		elListe = document.querySelector('[data-js-liste]'),
 		compteur = 0;
 
+		console.log(elTemplateLi);
+
 
 	elBtn.addEventListener('click', ajouteListItem);	
 
@@ -14,6 +16,28 @@
 	 */
 	function ajouteListItem() {
 
+		let elCloneTemplate = elTemplateLi.cloneNode(true);
+
+		elCloneTemplate.innerHTML = elCloneTemplate.innerHTML.replace('{{increment}}', ++compteur);
+
+		let elNouveauLi = document.importNode(elCloneTemplate.content, true)
+
+		console.log(elNouveauLi);
+
+		elListe.append(elNouveauLi);  // Ajouter un noeud
+
+		/**
+		 * Dinamiser le contenu
+		 * Comme Mustache et Twig
+		 * Identifier un élément sur lequel je veux assigner une valeur
+		 */
+		
+
+
+
+
+	
+	
 
 
 
