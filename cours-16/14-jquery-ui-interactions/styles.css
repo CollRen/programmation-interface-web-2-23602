@@ -1,0 +1,141 @@
+select {
+    width: 200px;
+}
+
+div + div {
+    margin-top: 50px;
+}
+
+.ui-droppable {
+    margin-top: 25px;
+}
+
+#dialog-link {
+    padding: .4em 1em .4em 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+#dialog-link span.ui-icon {
+    margin: 0 5px 0 0;
+    position: absolute;
+    left: .2em;
+    top: 50%;
+    margin-top: -8px;
+}
+
+#icons {
+    margin: 0;
+    padding: 0;
+}
+
+#icons li {
+    margin: 2px;
+    position: relative;
+    padding: 4px 0;
+    cursor: pointer;
+    float: left;
+    list-style: none;
+}
+
+#icons span.ui-icon {
+    float: left;
+    margin: 0 4px;
+}
+
+
+/* DÉPLACER */
+
+#draggable,
+#draggable-droppable { 
+    cursor: pointer;
+    height: 200px; 
+    padding: 0.5em; 
+    width: 200px; 
+}
+
+
+/* DÉPOSER */
+
+#droppable { 
+    height: 400px; 
+    padding: 0.5em; 
+    width: 400px; 
+}
+
+
+/* REDIMENSIONNER */
+
+#resizable { 
+    height: 200px; 
+    padding: 0.5em; 
+    width: 200px; 
+}
+
+#resizable h3 { 
+    margin: 0; 
+    text-align: center; 
+}
+
+
+/* SÉLECTIONNER */
+
+.ui-selectee {
+    cursor: pointer;
+}
+
+#feedback { 
+    font-size: 1.4em; 
+}
+
+#selectable .ui-selecting { 
+    background: #FECA40; 
+}
+
+#selectable .ui-selected { 
+    background: #F39814; 
+    color: white; 
+}
+
+#selectable { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    width: 60%; 
+}
+
+#selectable li { 
+    font-size: 1.4em; 
+    margin: 3px; 
+    padding: 0.4em; 
+}
+
+
+/* TRIER */
+
+.ui-sortable-handle {
+    cursor: pointer;
+}
+
+.ui-icon {
+    margin-top: 0.2em;
+}
+
+#sortable { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    width: 60%; 
+}
+
+#sortable li { 
+    font-size: 1.4em; 
+    margin: 0 3px 3px 3px; 
+    padding: 0.4em; 
+    padding-left: 1.5em; 
+}
+
+#sortable li span { 
+    margin-left: -1.3em; 
+    position: absolute; 
+}

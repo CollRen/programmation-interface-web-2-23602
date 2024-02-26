@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr_CA">
+<head>
+    <!-- meta -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Cours 16 | jQuery UI Effects | jQuery et jQuery UI</title>
+	<meta name="description" content="Cours 16 du cours 582-31F-MA Programmation d'interface Web 2 : Librairie externe jQuery et jQuery UI">
+
+	<!-- styles -->
+	<!-- Cloudflare CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="../styles/styles.css">
+	<link rel="stylesheet" type="text/css" href="./styles.css">
+	
+	<!-- scripts -->
+	<!-- jQuery CDN -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+	
+	<script src="./main.js"></script>
+</head>
+
+<body>
+	<header>
+		<h1>Cours 16 - jQuery UI Effects</h1>
+	</header>
+	
+    <main>
+		
+		<!-- Effets -->
+		<div>
+			<h2>Effets</h2>
+			<div class="toggler">
+				<div id="effect-toggle" class="ui-widget-content ui-corner-all">
+				<h3 class="ui-widget-header ui-corner-all">Effets</h3>
+				<p>
+					Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede. Nulla lorem metus, adipiscing ut, luctus sed, hendrerit vitae, mi.
+				</p>
+				</div>
+			</div>
+			
+			<select name="effects" id="effectTypes">
+				<option value="blind">Blind</option>
+				<option value="bounce">Bounce</option>
+				<option value="clip">Clip</option>
+				<option value="drop">Drop</option>
+				<option value="explode">Explode</option>
+				<option value="fade">Fade</option>
+				<option value="fold">Fold</option>
+				<option value="highlight">Highlight</option>
+				<option value="puff">Puff</option>
+				<option value="pulsate">Pulsate</option>
+				<option value="scale">Scale</option>
+				<option value="shake">Shake</option>
+				<option value="size">Size</option>
+				<option value="slide">Slide</option>
+			</select>
+			
+			<button id="button-toggle" class="ui-state-default ui-corner-all">Engager l'effet</button>
+		</div>
+
+	</main>
+</body>
+</html>
+

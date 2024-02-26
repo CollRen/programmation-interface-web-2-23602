@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr_CA">
+<head>
+    <!-- meta -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Cours 16 | jQuery UI Intéractions | jQuery et jQuery UI</title>
+	<meta name="description" content="Cours 16 du cours 582-31F-MA Programmation d'interface Web 2 : Librairie externe jQuery et jQuery UI">
+
+	<!-- styles -->
+	<!-- Cloudflare CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="../styles/styles.css">
+	<link rel="stylesheet" type="text/css" href="./styles.css">
+	
+	<!-- scripts -->
+	<!-- jQuery CDN -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+	
+	<script src="./main.js"></script>
+</head>
+
+<body>
+	<header>
+		<h1>Cours 16 - jQuery UI Intéractions</h1>
+	</header>
+	
+    <main>
+
+		<!-- Déplacer -->
+		<div>
+			<h2>Déplacer</h2>
+			<div id="draggable" class="ui-widget-content">
+				<p>Déplace-moi</p>
+			</div>
+		</div>
+		
+		
+		<!-- Déposer -->
+		<div>
+			<h2>Déposer</h2>
+			<div id="draggable-droppable" class="ui-widget-content">
+				<p>Dépose-moi sur la cible</p>
+			</div>
+			
+			<div id="droppable" class="ui-widget-header">
+				<p>Déposer ici</p>
+			</div>
+		</div>
+		
+		
+		<!-- Redimensionner -->
+		<div>
+			<h2>Redimensionner</h2>
+			<div id="resizable" class="ui-widget-content">
+				<p>Redimensionne-moi</p>
+			</div>
+		</div>
+		
+		
+		<!-- Sélectionner -->
+		<div>
+			<h2>Sélectionner</h2>
+			<ol id="selectable">
+				<li class="ui-widget-content">Item 1</li>
+				<li class="ui-widget-content">Item 2</li>
+				<li class="ui-widget-content">Item 3</li>
+				<li class="ui-widget-content">Item 4</li>
+				<li class="ui-widget-content">Item 5</li>
+				<li class="ui-widget-content">Item 6</li>
+				<li class="ui-widget-content">Item 7</li>
+			</ol>
+		</div>
+		
+		<!-- Trier -->
+		<div>
+			<h2>Trier</h2>
+			<ul id="sortable" data-js-sortable>
+				<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+				<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+				<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+				<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+				<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+				<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+				<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+			</ul>
+		</div>
+	
+	</main>
+</body>
+</html>
