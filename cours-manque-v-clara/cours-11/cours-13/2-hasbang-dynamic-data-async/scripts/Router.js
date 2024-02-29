@@ -66,7 +66,7 @@ export default class Router {
                 if(hashInArray[1]){
                     if(isId) {
                         let id = hashInArray[1].slice(1);
-                        this.#_routes[i][1](id);  //onde 1 é o método chamado (láááá em cima em this._routes, depois da vírgula)
+                        this.#_routes[i][1](id);  // c'est la méthode this._routes, après la virgule)
                         isRoute = true;
                         return id;
                     } 

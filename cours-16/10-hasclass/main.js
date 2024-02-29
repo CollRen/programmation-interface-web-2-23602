@@ -1,7 +1,8 @@
 $(window).on('load', function() {
     
     $('button').on('click', function() {
-        
+    
+
         // bool
         console.log($('p').hasClass('paragraphe'));
         console.log($('p').hasClass('nope'));
