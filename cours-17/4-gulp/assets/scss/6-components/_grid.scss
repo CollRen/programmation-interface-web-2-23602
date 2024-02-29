@@ -1,0 +1,29 @@
+.grid {
+    display: grid;
+    padding: 0 $space-large;
+}
+
+.grid--2 {
+    grid-gap: 2.5vw;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3 {
+    grid-gap: 2.5vw;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4 {
+    grid-gap: 1.75vw;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--6 {
+    grid-gap: 1.25vw;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.grid__item,
+.grid__image {
+    width: 100%;
+}

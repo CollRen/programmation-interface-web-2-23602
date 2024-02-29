@@ -1,0 +1,7 @@
+.wrapper {
+    padding: 0 15px;
+
+    @media only screen and (min-width: $mobile) {
+        padding: 0 8vw;
+    }
+}

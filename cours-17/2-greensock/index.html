@@ -1,0 +1,68 @@
+<html lang="fr_CA">
+<head>
+    <!-- meta -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Cours 17 | GreenSock GSAP | npm</title>
+	<meta name="description" content="Cours 17 du cours 582-31F-MA Programmation d'interface Web 2 : npm">
+
+	<!-- styles -->
+	<link rel="stylesheet" type="text/css" href="../styles/styles.css">
+	<link rel="stylesheet" type="text/css" href="./styles.css">
+
+    <!-- scripts -->
+    <!--
+    <script type="importmap">
+        {
+            "imports": {
+                "gsap": "./node_modules/gsap/all.js"
+            }
+        }
+    </script>
+    -->
+    
+    <script src="./main.js" type="module" defer></script>
+</head>
+
+<body>
+	<header>
+		<div class="wrapper">
+			<h1>Cours 17 - GreenSock GSAP</h1>
+            <p>Ref : <a href="https://greensock.com/get-started/" target="_blank" rel="noreferrer">GreenSock GSAP</a></p>
+            <a href="https://greensock.com/cheatsheet/" target="_blank" rel="noreferrer">Cheat Sheet</a>
+		</div>
+	</header>
+
+	<main>
+		<div class="wrapper">
+			<ul>
+				<li>1 - Se placer à la hauteur de ce dossier via le terminal</li>
+				<li>2 - <code>npm init</code></li>
+				<li>3 - <code>npm install gsap</code></li>
+				<li>3 - <code>import { gsap } from './node_modules/gsap/all.js'</code></li>
+				<li>4 - dans ce même fichier, appeler la méthode de l'<i>API</i> souhaitée sur la référence à l'objet <code>gsap</code>.</li>
+			</ul>
+		</div>
+
+
+        <!-- Tween au clic d'un bouton -->
+        <section>
+            <div class="wrapper">
+                <h2>GreenSock</h2>
+                
+                <div class="box" data-js-box></div>
+   
+                <div data-js-gsap>
+                    <button data-js-gsap-action="play">play()</button>
+                    <button data-js-gsap-action="pause">pause()</button>
+                    <button data-js-gsap-action="resume">resume()</button>
+                    <button data-js-gsap-action="reverse">reverse()</button>
+                    <button data-js-gsap-action="restart">restart()</button>
+                </div>
+
+            </div>
+        </section>
+	</main>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<html lang="fr_CA">
+<head>
+    <!-- meta -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Cours 17 | Swiper | npm</title>
+	<meta name="description" content="Cours 17 du cours 582-31F-MA Programmation d'interface Web 2 : npm">
+
+	<!-- styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="./styles.css">
+	<link rel="stylesheet" type="text/css" href="../styles/styles.css">
+
+
+    <!-- scripts -->
+
+    <!-- CDN -->
+    <!--<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>-->
+
+    <!--
+    <script type="importmap">
+        {
+            "imports": {
+                "swiper/bundle": "./node_modules/swiper/swiper-bundle.min.mjs"
+            }
+        }
+    </script>
+    -->
+
+    <script src="./main.js" type="module" defer></script>
+</head>
+
+<body>
+	<header>
+		<div>
+			<h1>Cours 17 - Swiper</h1>
+			<p>Ref : <a href="https://swiperjs.com/" target="_blank" rel="noreferrer">Swiper</a></p>
+		</div>
+	</header>
+
+	<main>
+		<div>
+			<ul>
+				<li>1 - Se placer à la hauteur de ce dossier via le terminal</li>
+				<li>2 - <code>npm init</code></li>
+				<li>3 - <code>npm install swiper</code></li>
+				<li>4 - <code>import Swiper from './node_modules/swiper/swiper-bundle.min.mjs';</code></li>
+				<li>5 - <code>const swiper = new Swiper('.swiper', { options });</code></li>
+			</ul>
+		</div>
+
+        <section data-js-component="Swiper">
+            <div>
+                <h2>Carrousel</h2>
+                
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                    </div>
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
+                
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+
+            </div>
+        </section>
+
+	</main>
+</body>
+</html>

@@ -1,0 +1,9 @@
+a {
+    font-family: $font-primary;
+    font-weight: 400;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
